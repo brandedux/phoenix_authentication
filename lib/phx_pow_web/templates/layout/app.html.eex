@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Phoenix with Pow Authentication</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+      <div class="navigation">
+        <ul class="nav">
+          <li class="logo">
+            <a href="/"><img src="<%= Routes.static_path(@conn, "/images/logo.jpg") %>" alt="Branded UX" /></a>
+          </li>
+          <li class="btn">
+            <a href="javascript:void(0);" class="btn-link icon"><i class="fa fa-bars"></i></a>
+            <ul class="menu">
+              <%= if Pow.Plug.current_user(@conn) do %>
+                <li><%= link "Sign Out", to:  Routes.pow_session_path(@conn, :delete), method: :delete, class: "nav" %></li>
+                <li><%= link "Profile", to: "/registration/edit", class: "nav" %></li>
+              <% else %>
+                <li><%= link "Sign In", to: Routes.pow_session_path(@conn, :new), class: "nav" %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </div>
+    </header>
+    <main role="main" class="main container">
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= render @view_module, @view_template, assigns %>
+      <br />
+    </main>
+    <footer class="footer">
+      <section class="container">
+        <nav role="navigation">
+          <ul>
+            <li>&copy; <a href="https://brandedux.com" target="_blank">Branded UX</a> 2019</li>
+            <li><a href="/">Home</a></li>
+            <%= if Pow.Plug.current_user(@conn) do %>
+              <li><%= link "Profile", to: "../registration/edit" %></li>
+              <li><%= link "Send Invite", to: "/invitations/new" %></li>
+              <li><%= link "Sign Out", to:  Routes.pow_session_path(@conn, :delete), method: :delete %></li>
+            <% else %>
+              <li><%= link "Register", to: Routes.pow_registration_path(@conn, :new) %></li>
+              <li><%= link "Sign In", to: Routes.pow_session_path(@conn, :new) %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </section>
+    </footer>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

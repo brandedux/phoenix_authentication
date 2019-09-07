@@ -1,0 +1,193 @@
+/* This file is for your custom application css. */
+body {
+  margin:0;
+  padding:0;
+}
+
+.bux-logo {
+  float: left;
+  margin: 1rem; 
+}
+
+.bux-logo img {
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.center {
+  text-align: center;
+}
+
+.matches {
+ margin: 0;
+ width:100%;
+}
+
+/* NAVBAR */
+#navbar {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  width: 100%;
+}
+
+/* RESPONSIVE MENU */
+.header {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.navigation {
+  background-color: #fff;
+  margin: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.navigation ul {
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.navigation .btn .menu {
+  display: none;
+}
+
+.navigation .btn:hover .menu {
+  display: block;
+}
+
+.navigation li a {
+  display: block;
+  padding: .5em;
+  text-align:right;
+  text-decoration: none;
+}
+
+.navigation li a:hover {
+  /* background-color: #f4f4f4; */
+}
+ 
+.navigation .logo {
+  display: block;
+  float: left;
+}
+
+.logo img {
+  float:left;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  text-align:left;
+  width: 40px;
+} 
+
+.navigation .btn-link {
+  float: right;    
+  padding: 1em;
+  padding-right: 1.5em;
+  text-align:right;
+}
+
+.navigation .menu {
+  clear: both;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+  .navigation li {
+    float: right;
+    padding-top: .75em;
+    padding-right: .75em;
+  }
+  .navigation li a {
+    margin: 0 1em;
+    padding: 0;
+  }
+  .navigation .btn .menu {
+    display: block;
+  }
+  .navigation .btn-link {
+    display: none;
+  }
+}
+
+/* container */
+.main{
+  padding-top: 6em;
+}
+.container .row {
+  margin: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.container .row a {
+  float: left;
+  position: relative;  
+  width: 100%;
+}
+
+.container .row a img {
+  display: block;
+  width: 100%;
+}
+
+.container .row a span {
+  bottom: 5%;
+  color: #fff;
+  font-size: 2em;
+  left: 5%;
+  position: absolute;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.container .row-split a span {
+  display: none;
+}
+
+.container .row-split a:hover span {
+  display: block;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+  .container .row-split a {
+    width: 50%;
+  }
+}
+
+/* WELLS */
+.well {  
+  border-bottom: 1px solid #e3e3e3;
+  border-left: 1px solid #eee;
+  border-radius: 6px;
+  border-right: 1px solid #eee;
+  border-top: 1px solid #eee;
+  font-size: 80%;
+  font-weight: 200;
+  
+  padding-top: 1em; 
+  text-align: center;
+}
+
+.well h3 {
+  padding-top: 1em;
+}
+
+.footer {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
