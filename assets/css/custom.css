@@ -34,6 +34,7 @@ body {
 
 /* RESPONSIVE MENU */
 .header {
+  background-color: #fff;
   margin: 0px;
   padding: 0px;
   position: fixed;
@@ -43,14 +44,12 @@ body {
 }
 
 .navigation {
-  background-color: #fff;
   margin: auto;
   max-width: 100%;
   overflow: hidden;
 }
 
 .navigation ul {
-  background-color: #fff;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -122,7 +121,7 @@ body {
 
 /* container */
 .main{
-  padding-top: 6em;
+  padding-top: 5em;
 }
 .container .row {
   margin: auto;
@@ -165,7 +164,11 @@ body {
   }
 }
 
-/* WELLS */
+/* MATCHES */
+.matches {
+  padding-bottom: 5em;
+}
+
 .well {  
   border-bottom: 1px solid #e3e3e3;
   border-left: 1px solid #eee;
@@ -183,9 +186,18 @@ body {
   padding-top: 1em;
 }
 
+.well ul {
+  padding-bottom: 5em;
+}
+
+.well li {
+  list-style: none;
+}
+
 .footer {
   background-color: #fff;
   bottom: 0;
+  font-size: .7em;
   left: 0;
   position: fixed;
   text-align: center;

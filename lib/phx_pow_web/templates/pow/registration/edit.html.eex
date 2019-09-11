@@ -26,5 +26,10 @@
   <div>
     <%= submit "Update" %>
   </div>
+  <div>
+    <%= link "Delete my account", to: Routes.pow_registration_path(@conn, :delete),
+      method: :delete, data: [confirm: "Are you sure you want to delete your account?"]
+    %>
+  </div>
 <% end %>
 
