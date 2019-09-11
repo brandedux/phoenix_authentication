@@ -19,6 +19,8 @@
   <%= password_input f, :confirm_password %>
   <%= error_tag f, :confirm_password %>
 
+  <%= hidden_input f, :role %>
+  
   <div>
     <%= submit "Register" %>
   </div>

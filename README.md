@@ -11,9 +11,7 @@ Clone the repo to your local machine and install it.<br />
 
   `$ mix deps.compile`
 
-  `$ mix ecto.create`
-
-  `$ mix ecto.migrate`
+  `$ mix ecto.setup`
   
   `$ cd assets && npm install`
   

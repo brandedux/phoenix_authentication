@@ -41,7 +41,7 @@
       <section class="container">
         <nav role="navigation">
           <ul>
-            <li>&copy; <a href="https://brandedux.com" target="_blank">Branded UX</a> 2019</li>
+            <li>&copy; <a href="https://brandedux.com" target="_blank">Branded UX</a> MMXIX</li>
             <li><a href="/">Home</a></li>
             <%= if Pow.Plug.current_user(@conn) do %>
               <li><%= link "Profile", to: "../registration/edit" %></li>

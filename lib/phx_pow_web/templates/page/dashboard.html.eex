@@ -1,5 +1,5 @@
 <section class="phx-hero">
   <%= if Pow.Plug.current_user(@conn) do %>
-    <%= @current_user.dob %>
+    <%= @current_user.email %>
   <% end %>
 </section>
