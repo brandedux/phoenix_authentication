@@ -156,6 +156,10 @@ body {
   display: block;
 }
 
+.role {
+  text-transform: capitalize;
+}
+
 /* 48em = 768px */
 @media (min-width: 48em) {
   .container .row-split a {

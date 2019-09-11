@@ -7,6 +7,8 @@ defmodule PhxPow.Repo.Migrations.CreateUsers do
       add :password_hash, :string
 
       timestamps()
+
+      add :role, :string, default: "user"
     end
 
     create unique_index(:users, [:email])
