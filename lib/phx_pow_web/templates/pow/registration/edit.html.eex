@@ -15,11 +15,11 @@
   <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset) %>
   <%= error_tag f, Pow.Ecto.Schema.user_id_field(@changeset) %>
 
-  <%= label f, :password %>
+  <%= label f, :new_password %>
   <%= password_input f, :password %>
   <%= error_tag f, :password %>
 
-  <%= label f, :confirm_password %>
+  <%= label f, :confirm_new_password %>
   <%= password_input f, :confirm_password %>
   <%= error_tag f, :confirm_password %>
 
