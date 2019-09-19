@@ -23,13 +23,24 @@
   <%= password_input f, :confirm_password %>
   <%= error_tag f, :confirm_password %>
 
+  <%= label f, :date_of_birth %>
+  <%= month_first_date_select f, :date_of_birth, year: [options: 2019..1915] %>
+
+  <!-- % = label f, :role % >
+  < % = select f, :role, role: [
+    options: [
+        {gettext("User"), "user"},
+        {gettext("Admin"), "admin"},
+      ]
+    ] 
+  % >
+  < % = error_tag f, :role % -->
+
   <div>
     <%= submit "Update" %>
-  </div>
-  <div>
-    <%= link "Delete my account", to: Routes.pow_registration_path(@conn, :delete),
+   
+    <%= link "Delete my account", class: "button right", to: Routes.pow_registration_path(@conn, :delete),
       method: :delete, data: [confirm: "Are you sure you want to delete your account?"]
     %>
   </div>
 <% end %>
-

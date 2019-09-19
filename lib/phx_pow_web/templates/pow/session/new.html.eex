@@ -11,10 +11,6 @@
   <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset) %>
   <%= error_tag f, Pow.Ecto.Schema.user_id_field(@changeset) %>
 
-  <!-- % = label f, Pow.Ecto.Schema.user_dob_field(@changeset) % >
-  < % = text_input f, Pow.Ecto.Schema.user_dob_field(@changeset) % >
-  < % = error_tag f, Pow.Ecto.Schema.user_dob_field(@changeset) % -->
-
   <%= label f, :password %>
   <%= password_input f, :password %>
   <%= error_tag f, :password %>
@@ -25,6 +21,6 @@
 <% end %>
 
 <div class="center">
-  <%= link "Don't have an account yet?", to: Routes.pow_registration_path(@conn, :new) %><br />
+  <%= link "Don't have an account yet? Join today!", to: Routes.pow_registration_path(@conn, :new) %><br />
   <%= link "Reset your password.", to: "/reset-password/new" %>
 </div>

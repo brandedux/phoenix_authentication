@@ -18,6 +18,9 @@
   <%= label f, :confirm_password %>
   <%= password_input f, :confirm_password %>
   <%= error_tag f, :confirm_password %>
+  
+  <%= label f, :date_of_birth %>
+  <%= month_first_date_select f, :date_of_birth, year: [options: 2016..1915] %>
 
   <%= hidden_input f, :role %>
   
@@ -26,5 +29,6 @@
   </div>
 <% end %>
 
-
-<div class="center"><%= link "Sign in if you are already registered.", to: Routes.pow_session_path(@conn, :new) %></div>
+<div class="center">
+  <%= link "Sign in if you are already registered.", to: Routes.pow_session_path(@conn, :new) %>
+</div>

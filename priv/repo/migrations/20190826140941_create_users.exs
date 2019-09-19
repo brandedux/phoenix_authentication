@@ -9,6 +9,8 @@ defmodule PhxPow.Repo.Migrations.CreateUsers do
       timestamps()
 
       add :role, :string, default: "user"
+
+      add :date_of_birth, :date
     end
 
     create unique_index(:users, [:email])

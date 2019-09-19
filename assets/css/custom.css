@@ -4,6 +4,20 @@ body {
   padding:0;
 }
 
+.left {
+ float: left;
+ text-align: left;
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
 .bux-logo {
   float: left;
   margin: 1rem; 
@@ -13,10 +27,6 @@ body {
   display: block;
   height: 40px;
   width: 40px;
-}
-
-.center {
-  text-align: center;
 }
 
 .matches {
