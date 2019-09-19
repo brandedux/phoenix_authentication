@@ -28,8 +28,8 @@ config :phoenix, :json_library, Jason
 config :phx_pow, :pow,
   user: PhxPow.Users.User,
   repo: PhxPow.Repo,
-  extensions: [PowResetPassword, PowEmailConfirmation, PowInvitation],
-  # PowPersistentSession
+  extensions: [PowResetPassword, PowEmailConfirmation],
+  #  PowInvitation, PowPersistentSession
   controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
   web_module: PhxPowWeb,
   mailer_backend: PhxPowWeb.Mailer

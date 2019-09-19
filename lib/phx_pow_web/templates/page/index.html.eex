@@ -2,71 +2,60 @@
   <%= if Pow.Plug.current_user(@conn) do %>
     <img src="<%= Routes.static_path(@conn, "/images/avatar-wolf.png") %>" alt="<%= @current_user.email %>"/><br />
     <div class="role"><%= @current_user.role %></div>
+    <div><%= format_date_of_birth( @current_user.date_of_birth)%></div>
     <div><%= @current_user.email %></div>
     <a href="mailto:<%= @current_user.email %>">Send Email</a>
-    <!-- % = form_for @changeset, @action, [as: :user], fn f -> % >
-      < % = if @changeset.action do % >
-        <div class="alert alert-danger">
-          <p>Oops, something went wrong! Please check the errors below.</p>
-        </div>
-      < % end % >
-      < % = label f, Pow.Ecto.Schema.dob_field(@changeset) % >
-      < % = text_input f, Pow.Ecto.Schema.dob_field(@changeset) % >
-      < % = error_tag f, Pow.Ecto.Schema.dob_field(@changeset) % >
-      <div>
-        < % = submit "Continue" % >
-      </div>
-    < % end % -->
   <% else %>
     <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
     <p>A productive web framework that<br/>does not compromise speed or maintainability.</p>
-    <p><%= link "Register", to: Routes.pow_registration_path(@conn, :new) %></p>
+    <br />
+    <p><%= link "Register", class: "button", to: Routes.pow_registration_path(@conn, :new) %></p>
   <% end %>  
 </section>
 
 <%= if Pow.Plug.current_user(@conn) do %>
-<section class="row matches">
-  <article class="column well">
-    <h3>A</h3>
-    <ul>
-      <li>
-        <a href="#">1</a>
-      </li>
-      <li>
-        <a href="#">2</a>
-      </li>
-      <li>
-        <a href="#">3</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column well">
-    <h3>B</h3>
-    <ul>
-      <li>
-        <a href="#">1</a>
-      </li>
-      <li>
-        <a href="#">2</a>
-      </li>
-      <li>
-        <a href="#">3</a>
-      </li>
-    </ul>
-  </article>
-   <article class="column well">
-    <h3>C</h3>
-    <ul>
-      <li>
-        <a href="">1</a>
-      </li>
-      <li>
-        <a href="#">2</a>
-      </li>
-      <li>
-        <a href="#">3</a>
-      </li>
-    </ul>
-  </article>
-</section>
+  <section class="row matches">
+    <article class="column well">
+      <h3>A</h3>
+      <ul>
+        <li>
+          <a href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+      </ul>
+    </article>
+    <article class="column well">
+      <h3>B</h3>
+      <ul>
+        <li>
+          <a href="#">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+      </ul>
+    </article>
+     <article class="column well">
+      <h3>C</h3>
+      <ul>
+        <li>
+          <a href="">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+      </ul>
+    </article>
+  </section>
 <% end %>  
